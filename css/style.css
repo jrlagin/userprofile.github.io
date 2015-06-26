@@ -536,7 +536,6 @@ and (max-width : 480px) {
    width: 100%;
   }
   .header .name{
-    color: red;
     width: 100%;
     font-size: 20px;
   }
@@ -585,7 +584,7 @@ and (max-width: 640px) {
   }
    
   .header .name{
-    color: blue!important;
+   
     width: 50%;
     font-size: 30px;
   }
