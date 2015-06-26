@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Exam User Profile</title> 
-    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900'>
+    <meta name="viewport" content="width=device-width">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -12,48 +13,93 @@
 
  <div class="container">
 	<div class="material clearfix">
-	<div class="top-bar">
-     <span class="title">User Profile</span>
-	</div>
-
+	
 
 	 <div class="header">
-	  <div class="photo"><img src="http://www.oroklinidesign.com/wp-content/uploads/2013/04/59593_448873375179894_887317911_n.jpg" width="100" height="100"></div>
-	  <div class="username"><p>Username</p></div>
-	  <div class="post"><a id="commentme">0</a><p>Posts</p></div>
-	  <div class="like"><a id="likeme">0</a> <p>Likes</p></div>
-	  <div class="comment"><a id="commentme2">0</a><p>Comments</p></div>    
+	  <div class="photo"><img src="http://www.oroklinidesign.com/wp-content/uploads/2013/04/59593_448873375179894_887317911_n.jpg" ></div>
+	  
+	  <div class="username">
+	  	<p class="name">Bernard L, III</p>
+	    <div class="stats meta cf">
+            <div class="posts count">
+              <small class="label">Posts</small>
+              <span class="count" >5523</span>
+            </div>
+            <div class="likes count">
+              <small class="label">Likes</small>
+              <span class="count">8523</span>
+            </div>
+            <div class="comments count">
+              <small class="label">Comments </small>
+              <span class="count">4431</span>
+            </div>
+        </div>
+       </div>
+   
 	 </div>	
+<!--
+	 <div class="post"><a id="commentme">0</a><p>Posts</p></div>
+	  <div class="like"><a id="likeme">0</a> <p>Likes</p></div>
+	  <div class="comment"><a id="commentme2">0</a><p>Comments</p></div> 
+--> 		 
 
-		<div class="tabs clearfix">
-			<a href="#">Timeline</a>
-			<a href="#">Friend List</a>
-			<a href="#">Top Rate</a>
-		</div>
-
-		 
-
-	<div class="tabs-content" id="commentbox" style="display:none;">
+	<div class="tabs-content" id="commentbox" >
 		<div class="slider">
 		  <div id="item1"class="content active">
-		    <h1>Post add</h1>
+		    <p class="entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, nostrum non illum reiciendis commodi aliquam possimus quos. Doloribus, vel, adipisci, enim fuga ad repudiandae quia dicta aspernatur doloremque voluptatem beatae.</p>
 		    <p id="postslide"></p>
-		    <h1>Post add</h1>
-		    <p id="com">comment</p>
+		  
+		    
             <p id="posta"></p>
+            <div class="meta">
+              <small class="replies">
+                <i class="fa fa-comments"></i>
+                <span class="count">2</span>
+              </small>
+            
+              <small class="likes" id="heartred">
+                <i class="fa fa-heart"></i>              
+              </small>
+                <small class="likes" >
+                <span class="count" id="commentme12">24</span>
+                </small>
+              <small class="time-ago">
+                <i class="fa fa-clock-o"></i> Just now
+              </small>
+            </div>
 		  </div>
+
 		  <div id="item2" class="content">
-		    <h1>Post add</h1>
-   			<p id="postslideb"></p>
-		    <h1>Post add</h1>
-		     <p id="com">comment</p>
+            
+              
+		    <p class="entry">Your Post here:</p>
+   			<p id="postslideb" class="entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, nostrum non illum reiciendis commodi aliquam possimus quos. Doloribus, vel, adipisci, enim fuga ad repudiandae quia dicta aspernatur doloremque voluptatem beatae.</p>
+		 
+		     <p id="com">Reply:</p>
             <p id="postb"></p>
+            <div class="meta">
+              <small class="replies">
+                <i class="fa fa-comments"></i>
+                <span class="count">2</span>
+              </small>
+            
+              <small class="likes" id="commentme122">
+                <i class="fa fa-heart"></i>              
+              </small>
+                <small class="likes">
+                <span class="count">24</span>
+                </small>
+              <small class="time-ago">
+                <i class="fa fa-clock-o"></i> Just now
+              </small>
+            </div>
 		  </div>
 		
 		  <span class="direction left" onclick="prevSlide();">&lt;</span>
 		  <span class="direction right" onclick="nextSlide();">&gt;</span>
 		</div>
-		<div class="friend-list">
+
+		<div class="friend-list" style="display:none;">
 			<div class="list-ul">
 				<div class="list-li title">Reply to Post</div>
 				<div class="list-li clearfix">				
@@ -70,7 +116,7 @@
 		  <div class="modal-dialog">
 		    <div class="modal-header">
 		      <h2>New Post</h2>
-		      <a href="#" class="btn-close" aria-hidden="true">×</a>
+		      <a href="#" class="btn-close" aria-hidden="true">Ã—</a>
 		    </div>
 		    <div class="modal-body">
 		      <p>samplepost</p>
@@ -78,7 +124,7 @@
 		 
 		    </div>
 		    <div class="modal-footer">
-		      <a href="#" onclick="test2()" class="btn">Post</a>
+		      <a href="#" onclick="test2()" class="btn bfn">Post</a>
 		    </div>
 		  </div>
 		</div>
@@ -91,15 +137,18 @@
 			<a href="http://twitter.com/khadkamhn" data-title="Twitter" style="display:none"><i class="fa fa-twitter"></i></a>
 			<a href="http://codepen.io/khadkamhn" data-title="Codepen" style="display:none"><i class="fa fa-codepen"></i></a>
 			<a href="http://pinterest.com/khadkamhn" data-title="Pinterest" style="display:none"><i class="fa fa-pinterest"></i></a>
-			<a href="#modal-one" class="btn btn-big" data-title="New Post"><i class="fa fa-comment"></i></a>
+			<a href="#modal-one" class="" data-title="New Post"></a>
+
 		</div>
 	   	</div>
 	   	<div class="profile">
 	   		 <div class="action pull-right">
-						<a href="#" class="btn"><i class="fa fa-thumbs-o-up colorw" onClick="likeMe();"></i></a>
+						<a href="#" class="btn" onclick="btnColor('heartred','commentme122','#ed668d');"><i class="fa fa-thumbs-o-up colorw" ></i></a>
 						  
 					</div>
-	   		<a href="#" class="btn" onclick="btncomment()"><i class="fa fa-reply colorw"></i></a>
+
+
+	   		<a href="#modal-one" data-title="New Post" class="btn"><i class="fa fa-reply colorw"></i></a>
 	   	</div>	
 	</div>	
   </div>
