@@ -1,43 +1,64 @@
 .container{
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	position:fixed;
-	overflow-y:auto;
-	background-size:cover;
-	background-attachment:fixed;
+  width: 650px;
+  margin: 0 auto;
 
+}
+html {
+  background: #f2f6fc;
+  font: 1.6em/1.6em Raleway, sans-serif;
 }
 body{
 	margin:0;
 	color:#ecf0f1;
 	/*background:#b1cfd6;*/
-	font:300 18px/18px Roboto;
 }
-*,:after,:before{box-sizing:border-box;}
+
+*{
+	margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,:after,:before{box-sizing:border-box;
+
+}
 
 .pull-left{float:left}
 .pull-right{float:right}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}
 .header{
- width: 400px;
-  position: relative;
-  right: 23px;
-  height: 140px;
-  border: 1px solid #fff;
-
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+   background-color: #fcfcfc;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #efefef;
+  height: 200px;
 }
+.profile{
 
+}
+img {
+  max-width: 100%;
+}
+.photo:hover {
+    background-color: #eee;
+  }
 .photo{
- width: 25%;
-  height: 101px;
-  float: left;
-  margin: 13px 25px;
-  background: #25252f;
+float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
+.photo img{
+ display: block;
+  border-radius: 50%;
+  width: 150px;
+}
+
 .post{
   width: 18%;
   height: 50px;
@@ -67,18 +88,52 @@ body{
   text-align: center;
   padding: 7px;
 }
-
+.header .name{
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+.header .stats .posts{
+  float: left;
+  width: 31%;
+}
+.header .stats .likes{
+  float: left;
+  width: 31%;
+}
+.header .stats .comments{
+  float: left;
+  width: 31%;
+}
+.meta {
+  color: #888;
+}
+.label{
+	display: block;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: Raleway, Arial;
+}
+span.count {
+  font-family: Arial;
+  font-size: 1.2em;
+}
 .username{
- float: left;
- width: 60%;
- padding: 22px;
+  margin-left: 170px;
+    height: 168px;
+      padding: 10px;
+
 }
-.username p{
-font-size: 30px;
+.box{padding: 10px;}
+.post{
+    position: relative;
+  overflow: hidden;
 }
 
-.post .like .comment, p{  margin: 0px!important;
-  font-size: 13px}
+
+
 .colorw{color: #fff;}
 #post #post2 #post3 , p{color: black;}
 /*slider*/
@@ -86,21 +141,27 @@ font-size: 30px;
 .slider {
   position: relative;
   display: block;
-  width: 320px;
+  width: 640px;
   overflow: hidden;
 
 }
 .notify{
 	display:none;color:red
 }
-.content {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  text-align: center;
+.content { 
+  height: 267
+  px;
+  text-align: left;
 
-  background-color: #A5A5AB;
 }
+.meta .time-ago{
+  font-size: 0.8em;
+  float: right;
+}
+
+p.entry{
+
+  }
 .content:not(.active) {display: none;}
 .rep{
   width:100%;border-radius:5px;height: 72px;
@@ -109,11 +170,10 @@ font-size: 30px;
 .direction {
   position: absolute;
   /* display: none; */
-  height: 100%;
+
   width: 30px;
   top: 0px;
-  left: 0px;
-  padding: 29% 0;
+
   font-size: 2em;
   text-align: center;
   font-weight: bold;
@@ -127,90 +187,22 @@ font-size: 30px;
   left: auto;
   right: 0px;
 }
-/*responsive*/
-@media only screen and (max-width: 320px) {
-	   .material{
-        width: 300px!important;
-	   }
-
-       .photo {
-          width: 91%!important;
-		  border: 1px solid #000;
-		  background: #25252f;
-		 }
-	   .like {
-             width: 90%!important;
-	         margin-left:16px; 
-
-		 }	
-		.post{
-		   width: 90%!important;
-	       margin-left:16px; 
-		}  
-   
-		.comment{
-		   width: 90%!important;
-	       margin-left:16px; 
-		
-		} 
-		.material .top-bar{
-		   width: 70%!important;
-		   height: 100!important;
-		   margin-left: auto!important;
-		   margin-right: auto!important;
-		}
-		.material .tabs-content .friend-list{
-			background: #25252f;	  		
-	  		width: 92%!important;
-	  		 margin-left:5px; 
-            margin-right:3px; 
-            margin-top:6px;
-		}
-		.modal-dialog{
-          width: 90%!important;
-          margin-left:16px; 
-
-		}
-		.header{
-			  width: 277px!important;
-			  position: relative;
-  			 left: 2px;
-			  height: 140px!important;
-		}
-        .material .profile{
-        	  padding: 28px;
-			  position: relative;
-			  width: 50%;
-			  float: left;
-			  right: 11px;
-        }
-        .material .tabs a{
-        	display: none;
-        }
-        .slider{
-        	position: relative;
-			display: block;
-			width: 247px;
-			overflow: hidden;
-			margin-left: 5px;
-        }
-}
 
 
 
 
 .material{
-	width:350px;
-	/*height:550px;*/
-	margin:5% auto 0;
-	position:relative;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 20px;
+  box-shadow: 0 0 2px #ddd;
 	
-	 box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 }
 
 .material a{
 	color:black;
 	text-decoration:none;
+    font-size: 43px;
 }
 .material .top-bar{
 	padding:15px;
@@ -261,11 +253,10 @@ font-size: 30px;
 .material .profile .links,
 .material .profile .toggle,
 .material .profile .links a{
-	bottom:0;
-	z-index:8;
 
-	width:35px;
-	height:35px;
+	z-index:8;
+	width:50px;
+	height:50px;
 	border-radius:50%;
 	position:absolute;
 }
@@ -298,6 +289,7 @@ font-size: 30px;
 	margin-top:-6px;
 	margin-left:-0.5px;
 }
+
 .material .profile .links a{
 	bottom:5px;
 	z-index:8;
@@ -305,7 +297,7 @@ font-size: 30px;
 	width:25px;
 	height:25px;
 	color:#343434;
-	background:#eee;
+
 	text-align:center;
 	line-height:25px;
 	-webkit-transform:none;
@@ -398,9 +390,11 @@ font-size: 30px;
 	text-align:center;
 }
 
-
+.bfn{
+  font-size: 15px!important;
+}
 .material .tabs-content{
-	padding:15px;
+	padding:5px;
 
 
 }
@@ -459,7 +453,9 @@ p {
 }
 .btn.btn-big {
   font-size: 18px;
+
 }
+.btn-big{}
 .btn-close {
   color: #aaaaaa;
   font-size: 30px;
@@ -500,7 +496,7 @@ p {
  
   top: -100%;
   z-index: 11;
-  width: 360px;
+  width: 650px;
   -webkit-transform: translate(0, -500%);
   -ms-transform: translate(0, -500%);
   transform: translate(0, -500%);
@@ -527,3 +523,80 @@ p {
   border-top: #eeeeee solid 1px;
   text-align: right;
 }
+
+/* == Smartphones (portrait and landscape) */
+@media only screen 
+and (min-width : 310px) 
+and (max-width : 480px) {
+  body {
+    margin: 0 15px;
+  
+  }
+  .container{
+   width: 100%;
+  }
+  .header .name{
+    color: red;
+    width: 100%;
+    font-size: 20px;
+  }
+  .photo{
+    margin-right: 0px;
+  }
+  .stats .count{
+    font-size: 16px;
+    float: left;
+    width: 30%;
+  }
+  .photo img{
+    display: block;
+   border-radius: 50%;
+   width: 100px;
+  
+  }
+  .username{
+   margin-left: 109px;
+  height: 168px;
+  padding: 10px;
+  }
+  .slider{
+    width: 100%;
+    font-size: 0.5rem;
+  }
+  .material .profile{
+  width: 100%;
+  padding: 0px;
+  }
+  .modal-dialog{
+    width: 90%;
+    margin: 5 auto;
+  }
+
+}
+
+@media only screen 
+and (min-width : 481px)
+and (max-width: 640px) {
+  
+  body {
+    margin: 0 10px;
+
+ 
+  }
+   
+  .header .name{
+    color: blue!important;
+    width: 50%;
+    font-size: 30px;
+  }
+
+  .slider{
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .container {
+    width: 100%;
+
+  }
+}
+
