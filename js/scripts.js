@@ -46,6 +46,11 @@ var property = document.getElementById(btn);
         document.getElementById("commentme12").innerHTML =likes3;
     }
 
+
+var likes22 = 25;
+likes22 += 0;
+document.getElementById("commentme2").innerHTML =  likes22;
+
 var property = document.getElementById(testbtn);
     if (property.className !== 'toggled') {
         property.style.color=color;
@@ -55,6 +60,9 @@ var property = document.getElementById(testbtn);
     else {
         property.style.color = "";
         property.className = '';
+        var likes33 = 23;
+         likes33 += 1;
+        document.getElementById("commentme2").innerHTML =likes3;
        
     }
 
