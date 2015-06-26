@@ -6,6 +6,7 @@
 
         likes += 1;
         document.getElementById("likeme").innerHTML = likes;
+        document.getElementById('heart').style.display = 'block';
      }
 
 	 function nextSlide() {
@@ -22,6 +23,43 @@
 	  	document.getElementById('commentbox').style.display = 'block';
 	  }
 
+
+
+ //function heart
+var likes2 = 25;
+function btnColor(btn, testbtn, color) {
+	  likes2 += 0;
+
+        document.getElementById("commentme12").innerHTML =  likes2;
+
+var property = document.getElementById(btn);
+    if (property.className !== 'toggled') {
+        property.style.color=color;
+        property.className = 'toggled'
+    }
+
+    else {
+        property.style.color = "";
+        property.className = '';
+        var likes3 = 23;
+         likes3 += 1;
+        document.getElementById("commentme12").innerHTML =likes3;
+    }
+
+var property = document.getElementById(testbtn);
+    if (property.className !== 'toggled') {
+        property.style.color=color;
+        property.className = 'toggled'
+    }
+
+    else {
+        property.style.color = "";
+        property.className = '';
+       
+    }
+
+
+}
 
 //function to display post comment
  
